@@ -1,1 +1,40 @@
 // Mixins in here
+
+.flexSet(@dir,@just,@align){
+    display: flex;
+    flex-direction: @dir;
+    justify-content: @just;
+    align-items: @align;
+
+}
+
+.createButton(@color-bg, @color-txt, @width, @pad, @font-sz, @radius){
+    
+    background: @color-bg;
+    width: @width;
+    text-align: center;
+    padding: @pad;
+    font-size: @font-sz;
+    color: @color-txt;
+    border-radius: @radius;
+}
+
+.keyframes(@name,@rules){
+    @keyframes @name {
+        @rules();
+    }
+}
+
+.keyframes(bounce, {
+    0%, 20%, 60%, 100% {
+		transform: translateY(0);
+	}
+
+	40% {
+		transform: translateY(-20px);
+	}
+
+	80% {
+		transform: translateY(-10px);
+	}
+});
