@@ -1,1 +1,40 @@
 // Navigation Styles here
+
+.container.nav{
+    max-width: 1000px;
+    border-bottom: 2px dashed @silver;
+
+    nav{
+        width: 80%;
+        margin: 1rem auto;
+        .flexSet(row, space-between, center);
+
+        @media @mobile{
+            flex-direction: column;
+            
+        }
+
+        p{
+            font-size: 4em;
+            font-family: "Indie Flower";
+        }
+    
+        .links{
+            width:40%;
+            .flexSet(row, space-around, center);
+
+            @media @mobile{
+                width: 100%;
+            }
+
+            a{
+                text-decoration: none;
+                color: @shark;
+                font-size: 2em;
+                &:hover{
+                    animation: bounce 1s 1 both;
+                }
+            }
+        }
+    }
+  }
